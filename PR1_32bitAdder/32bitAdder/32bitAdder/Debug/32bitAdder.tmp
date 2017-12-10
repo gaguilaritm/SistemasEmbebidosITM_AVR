@@ -1,0 +1,30 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.6</VERSION>
+ <DEVICE>"ATmega48"</DEVICE>
+ <WORKING_DIR>C:\Users\Gabriel\Desktop\AVR_Workspace\PR1_32bitAdder\32bitAdder\32bitAdder\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Gabriel\Desktop\AVR_Workspace\PR1_32bitAdder\32bitAdder\32bitAdder\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc\m48def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Gabriel\Desktop\AVR_Workspace\PR1_32bitAdder\32bitAdder\32bitAdder\Debug\32bitAdder.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>32bitAdder.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>32bitAdder.map</FILE>
+  <FILE>32bitAdder.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <ciclo_suma><FILE>C:\Users\Gabriel\Desktop\AVR_Workspace\PR1_32bitAdder\32bitAdder\32bitAdder\main.asm</FILE><LINE>19</LINE></ciclo_suma>
+  <hay_carry><FILE>C:\Users\Gabriel\Desktop\AVR_Workspace\PR1_32bitAdder\32bitAdder\32bitAdder\main.asm</FILE><LINE>29</LINE></hay_carry>
+  <cont><FILE>C:\Users\Gabriel\Desktop\AVR_Workspace\PR1_32bitAdder\32bitAdder\32bitAdder\main.asm</FILE><LINE>25</LINE></cont>
+  <fin><FILE>C:\Users\Gabriel\Desktop\AVR_Workspace\PR1_32bitAdder\32bitAdder\32bitAdder\main.asm</FILE><LINE>39</LINE></fin>
+ </LABELS>
+</ASSEMBLER_INFO>

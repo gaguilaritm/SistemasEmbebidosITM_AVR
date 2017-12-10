@@ -1,0 +1,33 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.6</VERSION>
+ <DEVICE>"ATmega48"</DEVICE>
+ <WORKING_DIR>D:\SEPTIMO SEMESTRE\PROCESADORES EMBEBIDOS\AVR_Workspace\PR3_1sCounter\PR3_1sCounter\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.132\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\SEPTIMO SEMESTRE\PROCESADORES EMBEBIDOS\AVR_Workspace\PR3_1sCounter\PR3_1sCounter\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:\SEPTIMO SEMESTRE\PROCESADORES EMBEBIDOS\AVR_Workspace\PR3_1sCounter\PR3_1sCounter\m48def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\SEPTIMO SEMESTRE\PROCESADORES EMBEBIDOS\AVR_Workspace\PR3_1sCounter\PR3_1sCounter\Debug\PR3_1sCounter.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>PR3_1sCounter.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>PR3_1sCounter.map</FILE>
+  <FILE>PR3_1sCounter.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <init><FILE>D:\SEPTIMO SEMESTRE\PROCESADORES EMBEBIDOS\AVR_Workspace\PR3_1sCounter\PR3_1sCounter\main.asm</FILE><LINE>15</LINE></init>
+  <store><FILE>D:\SEPTIMO SEMESTRE\PROCESADORES EMBEBIDOS\AVR_Workspace\PR3_1sCounter\PR3_1sCounter\main.asm</FILE><LINE>25</LINE></store>
+  <cuenta><FILE>D:\SEPTIMO SEMESTRE\PROCESADORES EMBEBIDOS\AVR_Workspace\PR3_1sCounter\PR3_1sCounter\main.asm</FILE><LINE>69</LINE></cuenta>
+  <delay><FILE>D:\SEPTIMO SEMESTRE\PROCESADORES EMBEBIDOS\AVR_Workspace\PR3_1sCounter\PR3_1sCounter\main.asm</FILE><LINE>83</LINE></delay>
+  <limpiar><FILE>D:\SEPTIMO SEMESTRE\PROCESADORES EMBEBIDOS\AVR_Workspace\PR3_1sCounter\PR3_1sCounter\main.asm</FILE><LINE>77</LINE></limpiar>
+  <exterior><FILE>D:\SEPTIMO SEMESTRE\PROCESADORES EMBEBIDOS\AVR_Workspace\PR3_1sCounter\PR3_1sCounter\main.asm</FILE><LINE>85</LINE></exterior>
+  <interior><FILE>D:\SEPTIMO SEMESTRE\PROCESADORES EMBEBIDOS\AVR_Workspace\PR3_1sCounter\PR3_1sCounter\main.asm</FILE><LINE>88</LINE></interior>
+ </LABELS>
+</ASSEMBLER_INFO>

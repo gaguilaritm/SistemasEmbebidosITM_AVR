@@ -1,0 +1,74 @@
+gavrasm Gerd's AVR assembler version 3.6 (C)2017 by DG4FAC
+----------------------------------------------------------
+Source file: /media/gabriel/TEC/SEPTIMO SEMESTRE/PROCESADORES EMBEBIDOS/AVR_Workspace/PR2_8bitDivider/PR2_8bitDivider/main.asm
+Hex file:    /media/gabriel/TEC/SEPTIMO SEMESTRE/PROCESADORES EMBEBIDOS/AVR_Workspace/PR2_8bitDivider/PR2_8bitDivider/main.hex
+Eeprom file: /media/gabriel/TEC/SEPTIMO SEMESTRE/PROCESADORES EMBEBIDOS/AVR_Workspace/PR2_8bitDivider/PR2_8bitDivider/main.eep
+Compiled:    07.09.2017, 14:52:15
+Pass:        2
+     1: ; PR2_8bitDivider.asm
+     2: ; 04/09/2017 9:45 AM
+     3: ; Dividir el valor encontrado en 2 puertos del ATmega48 y guardar el valor en RAM
+     4: 
+     5: ; Vale 100% hasta el miercoles
+     6: .include m328Pdef.inc
+ -> Warning 009: Include defs not necessary, using internal values!
+   File: /media/gabriel/TEC/SEPTIMO SEMESTRE/PROCESADORES EMBEBIDOS/AVR_Workspace/PR2_8bitDivider/PR2_8bitDivider/main.asm, Line: 6
+   Source line: .include m328Pdef.inc
+     7: ;.equ	tmp  =	r16
+     8: ;.equ     a  =	r17
+     9: ;.equ	  b  =	r18
+    10: .equ    res  =	0x100
+    11: 
+    12: .equ opaddr  =	DDRB
+    13: .equ  opain  =  PINB
+    14: .equ opaout  =  PORTB
+    15: 
+    16: .equ opbddr  =	DDRD
+    17: .equ  opbin  =   PIND
+    18: .equ opbout  =   PORTD
+    19: 
+    20: .org	0
+    21: 
+    22: ; Port initialization
+    23: 
+    24: init:
+    25: 000000   B705  in		r16, MCUCR		; guardamos el registro de control en r16
+    26: 000001   7F0B  cbr		r16, PUD		; aseguramos que no esten desactivadas las pullup
+    27: 000002   BF05  out		MCUCR, r16		; guardamos r16 en MCUCR
+    28: 
+    29: 000003   EF0F  ser 	r16				; llenamos r16
+    30: 000004   B905  out		opaout, r16		; configuramos las pullup en PORTB
+    31: 000005   B90B  out		opbout, r16		; configuramos las pullup en PORTD
+    32: 
+    33: 000006   2700  clr		r16				; limpia la variable temporal
+    34: 000007   B904  out 	opaddr, r16		; configura el puerto b como entrada
+    35: 000008   B90A  out		opbddr, r16		; configura el puerto d como entrada
+    36: 
+    37: div:
+    38: 000009   B113  in		r17, PINB		; recibe el valor a en el registro 17
+    39: 00000A   B129  in		r18, PIND		; recibe el valor b en el registro 18
+    40: 00000B   1712  cp		r17, r18        ; los compara para checar los casos donde
+    41: 00000C   F030  brlo	final			; a o b son cero 
+    42: 00000D   F029  breq	final
+    43: loop:
+    44: 00000E   1B12  sub		r17, r18		; restamos b de a
+    45: 00000F   9503  inc		r16				; incrementamos r16
+    46: 000010   1712  cp		r17, r18		; comparamos el residuo con el dividendo
+    47: 000011   F008  brlo	final			; si el residuo es menor que el dividendo terminamos
+    48: 000012   CFFB  rjmp	loop			; de otra manera continuamos las restas sucesivas
+    49: final:
+    50: 000013   9300  sts		0x100, r16		; al terminar guardamos el contador en la dir 0x100
+        000014   0100
+    51: 000015   C000  rjmp 	idle			; terminamos
+    52: idle:		
+    53: 000016   0000  nop	
+    54: 000017   CFFE  rjmp	idle	
+ -> Warning 001: 5 symbol(s) defined, but not used!
+
+Program             :       24 words.
+Constants           :        0 words.
+Total program memory:       24 words.
+Eeprom space        :        0 bytes.
+Data segment        :        0 bytes.
+Compilation completed, no errors.
+Compilation endet 07.09.2017, 14:52:15
